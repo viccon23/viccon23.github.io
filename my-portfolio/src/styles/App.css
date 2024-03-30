@@ -1,0 +1,180 @@
+/*
+This controls the body of the page
+You can use this to set the background color, margins, etc. as shown below
+*/
+
+html {
+  background: rgb(34, 34, 34);
+}
+
+.mainPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 600px;
+}
+
+  body {
+  margin: 10px;
+  padding: 15px;
+  }
+
+  /* This is used to make profile picture cropped as a circle */
+  .image img {
+    border-radius: 25%;
+    width: 600px;
+  }
+
+
+  .FrontPageTitle {
+    font-family: monospace;
+    padding-bottom: 50px;
+    width: 100%;
+    box-sizing: content-box;
+    position: relative;
+  }
+  .FrontPageTitle h1 {
+    color: #ffffff;
+    font-size: 120px;
+    margin: 0;
+    border-bottom: 2px solid rgb(75, 75, 75);
+  }
+
+  
+  /* Formatting for paragraph text */
+  p {
+    font-family: monospace;
+    color: #fff;
+    font-size: 40px;
+  }
+  
+  /* "a" refers to links, everything below controls the color and behavior of link objects */
+  a {
+    -webkit-transition: border-color 200ms ease, color 200ms ease;
+    transition: border-color 200ms ease, color 200ms ease;
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+      border-bottom-color: #ffffff;
+      color: gold;
+  }
+    
+   a:focus {
+   border-bottom-color: #ffffff;
+   color: gold;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%; /* Change to 100% to center the content */
+    margin: 0 auto; /* Center the container */
+    margin-bottom: 200px;
+  }
+  /* Anything marked as class="content" will have options below attached */
+  .content {
+    /*flex-grow: 4;*/
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+
+  /* Initially hide elements */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s, transform 2s;
+}
+
+/* Make elements visible when they have the "visible" class */
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+   .continuation p{
+    font-size: 70px;
+  }
+  .projectCards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .projects-list {
+    width: 100%; /* Set the width of the project list */
+    margin-bottom: 40px;
+  }
+
+  .project-container {
+    /* Everything shall be monospace. */
+    font-family: monospace;
+
+
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.466);
+    transition: transform 0.3s ease-in-out;
+    height: 700px; /* Set your desired fixed height */
+    width: 100%; /* Set your desired fixed width */
+    background: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(64,64,65,1) 35%, rgba(0,0,0,1) 100%);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Entire Container */
+  .project-info {
+    padding: 30px;
+  }
+  
+  /* Title of project */
+  .project-info h2 {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 30px;
+  }
+  
+  /* Project text*/
+  .project-info p {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .project-image {
+    padding: 20px;
+    flex: 0 0 40%;
+    width: 100%; /* Set the width of the image to occupy the entire available space */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+
+  }
+  
+  .project-container img {
+    max-width: 100%; /* Ensures image doesn't exceed container width */
+    height: 100%; /* Maintains aspect ratio */
+    border-radius: 3%;
+}
+
+.github-link {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;;
+  padding: 10px; /* Adjust padding as needed */
+}
+  
+
+
+  @media (max-width: 768px) {
+    .menu-link {
+      width: 100%; /* Set full width for smaller screens */
+      margin: 1rem 0; /* Adjust margin for smaller screens */
+    }
+  }
+  
