@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.be04656d.css",
-    "main.js": "/portfolio/static/js/main.f2751bb9.js",
-    "static/media/me.jpg": "/portfolio/static/media/me.ae1ca925458489f428f0.jpg",
-    "static/media/GPT2.jpg": "/portfolio/static/media/GPT2.dcc411a17f0a028d9557.jpg",
-    "static/media/Wordie2.png": "/portfolio/static/media/Wordie2.1899d2da4683d99bf1c4.png",
-    "index.html": "/portfolio/index.html",
-    "main.be04656d.css.map": "/portfolio/static/css/main.be04656d.css.map",
-    "main.f2751bb9.js.map": "/portfolio/static/js/main.f2751bb9.js.map"
+    "main.css": "/static/css/main.be04656d.css",
+    "main.js": "/static/js/main.dadac152.js",
+    "static/media/me.jpg": "/static/media/me.ae1ca925458489f428f0.jpg",
+    "static/media/GPT2.jpg": "/static/media/GPT2.dcc411a17f0a028d9557.jpg",
+    "static/media/Wordie2.png": "/static/media/Wordie2.1899d2da4683d99bf1c4.png",
+    "index.html": "/index.html",
+    "main.be04656d.css.map": "/static/css/main.be04656d.css.map",
+    "main.dadac152.js.map": "/static/js/main.dadac152.js.map"
   },
   "entrypoints": [
     "static/css/main.be04656d.css",
-    "static/js/main.f2751bb9.js"
+    "static/js/main.dadac152.js"
   ]
 }
