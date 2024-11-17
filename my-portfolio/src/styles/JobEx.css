@@ -1,0 +1,45 @@
+.job-experience-container {
+    padding: 1rem;
+    background-color: #0d9fc4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .job-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .job-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .company-name {
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+  
+  .duration {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ffffff;
+  }
+  
+  .job-description {
+    margin-top: 0.5rem;
+  }
+  
+  .job-description ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .job-description li {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+  }

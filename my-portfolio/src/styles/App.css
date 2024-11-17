@@ -11,7 +11,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 600px;
+  margin-bottom: 0px;
 }
 
   body {
@@ -71,7 +71,7 @@ html {
     justify-content: center;
     width: 85%; /* Change to 100% to center the content */
     margin: 0 auto; /* Center the container */
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
   /* Anything marked as class="content" will have options below attached */
   .content {
@@ -160,15 +160,35 @@ html {
     max-width: 100%; /* Ensures image doesn't exceed container width */
     height: 100%; /* Maintains aspect ratio */
     border-radius: 3%;
-}
+  }
 
-.github-link {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;;
-  padding: 10px; /* Adjust padding as needed */
-}
-  
+  .github-link {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;;
+    padding: 10px; /* Adjust padding as needed */
+  }
+    
+
+  footer {
+    border-top: 1px solid #ddd; /* Add a border line at the top */
+    margin: 10px;
+  }
+
+  .footer-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    font-size: 50px;
+  }
+
+  .social-icons a {
+    margin: 0 30px;
+    text-decoration: none;
+  }
 
 
   @media (max-width: 768px) {
