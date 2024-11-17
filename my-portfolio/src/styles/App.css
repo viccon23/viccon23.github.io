@@ -192,9 +192,50 @@ html {
 
 
   @media (max-width: 768px) {
-    .menu-link {
-      width: 100%; /* Set full width for smaller screens */
-      margin: 1rem 0; /* Adjust margin for smaller screens */
+    .container {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  
+    .content {
+      margin: 0 10px;
+    }
+  
+    .image img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  
+    .project-container {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+    }
+  
+    .project-image {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .project-info {
+      padding: 20px;
+    }
+  
+    .project-info h2 {
+      font-size: 24px;
+    }
+  
+    .project-info p {
+      font-size: 18px;
+    }
+  
+    .social-icons {
+      font-size: 30px;
+    }
+  
+    .social-icons a {
+      margin: 0 10px;
     }
   }
   
