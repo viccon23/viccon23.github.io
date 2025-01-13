@@ -101,8 +101,10 @@ function App() {
             <Project
               title={<h1>High Performance Voxel Game Engine</h1>}
               description="Collaborated with a colleague and a faculty advisor in creating a voxel game engine using C++ and the BGFX rendering library. The primary focus of the engine is to test out different optimization techniques and rendering algorithms to 
-              achieve high performance in chunk generation and frame rates, and benchmarking which techniques are the most effective in improving performance. The engine will also include lighting and shadowing techniques, as well as a physics engine to simulate destruction and creation."
+              achieve high performance in chunk generation and frame rates, and benchmarking which techniques are the most effective in improving performance. The engine will also include lighting and shadowing techniques, as well as a physics engine to simulate destruction and creation.
+              Although this was our capstone project, we both still plan to continue to develop it outside of our senior year, and it will be updated as time goes on, when either of us have free time and the motivation."
               imagePath={HighPerformanceVoxelEngine}
+              githubUrl={"https://github.com/athaun/voxel-engine"}
             />
           </div>
           <div className="projects-list reveal-on-scroll">
@@ -158,12 +160,13 @@ function Introduction() {
       </p>
 
       <p>
-        I've been around technology all my life. Computers, phones, tablets. I wanted to learn all about how they function, as well as how programming is used to guide it, which I found to be very enjoyable and exciting. I am continuously learning new ideas and concepts, as well as software that is used
-        to power it, and am excited to see where I'll stand as the years go by.
+        I started my journey in August of 2022 at the University of Texas Rio Grande Valley, persuing a Bachelors of Science in Computer Science. In December of 2024, I graduated and am now persuing a Masters Degree in Computer Science. 
+        I have been involved in various projects, both independently and in a team, and in these short two years of solely taking core Computer Science/ Math courses, I have grown and learned so much, and to say my life has changed (positively) is an understatement.
+        I am always looking for new opportunities to learn and grow as a developer, and I am very excited to see where my journey will take me as I tackle on more challenges both in school and in the workforce.
       </p>
 
       <p>
-        This website is still in construction, and as time passes, more features will be added. Until then, thanks for visiting, and enjoy your time here.
+        This website is still in construction, and as time passes, more features will be added.
       </p>
     </>
   )
@@ -196,8 +199,8 @@ function Project({ title, description, imagePath, githubUrl }) {
         <div className="project-info">
           <h2>{title}</h2>
           <p>{description}</p>
-          {githubUrl && <GitHubLink url={githubUrl} />}
         </div>
+        {githubUrl && <GitHubLink url={githubUrl} />}
         <div className="project-image">
             <img src={imagePath} alt={title} />
           </div>
