@@ -120,24 +120,24 @@ a:focus {
 .project-info h2 {
   padding-left: 30px;
   color: #ffffff;
-  font-size: 30px;
+  font-size: clamp(16px, 2vw, 30px); /* Dynamically adjust font size */
   position: relative;
   display: flex;
 }
 
 .project-info p {
   color: #ffffff;
-  font-size: 28px;
+  font-size: clamp(14px, 1.5vw, 28px); /* Dynamically adjust font size */
   padding-left: 30px;
   margin-bottom: 80px;
 }
 
 .project-image {
   padding: 20px;
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 
 }
 
@@ -145,7 +145,11 @@ a:focus {
   position: absolute;
   bottom: 10px;
   left: 30px;
-  padding: 10px;
+  padding-top: 20px;
+}
+
+.github-link i {
+  font-size: clamp(20px, 2vw, 50px); /* Dynamically adjust font size */
 }
 
 .project-container img {
@@ -182,8 +186,6 @@ footer {
   margin: 0 10px;
 }
 
-/* Responsive styles using media queries */
-
 @media (max-width: 1200px) {
   .FrontPageTitle h1 {
     font-size: 8vw; 
@@ -193,29 +195,14 @@ footer {
     font-size: 2.5vw;
   }
 
-  .image img {
-    width: 40vw; 
-  }
-
   .project-container {
-    height: 600px;
-  }
-
-  .project-info h2 {
-    font-size: 28px;
-  }
-
-  .project-info p {
-    font-size: 24px;
+    flex-direction: row;
+    height: auto;
   }
 
   .project-image {
     flex: 0 0 45%;
-  }
-
-  .project-container img {
-    max-width: 100%;
-    height: auto;
+    margin: 20px;
   }
 }
 
@@ -229,29 +216,26 @@ footer {
     font-size: 28px;
   }
 
-  .image img {
-    width: 50vw;
-  }
-
   .project-container {
-    height: 550px;
+    flex-direction: column;
+    height: auto;
   }
 
-  .project-info h2 {
-    font-size: 24px;
-  }
-
-  .project-info p {
-    font-size: 22px;
+  .project-info {
+    order: 1;
+    width: 100%;
   }
 
   .project-image {
-    flex: 0 0 50%;
+    order: 2;
+    width: 100%;
+    margin: 20px;
   }
 
-  .project-container img {
-    max-width: 100%;
-    height: auto;
+  .github-link {
+    bottom: 10px;
+    left: 10px;
+    font-size: clamp(18px, 2vw, 36px); /* Adjust font size for smaller screens */
   }
 }
 
@@ -265,36 +249,28 @@ footer {
     font-size: 24px;
   }
 
-  .image img {
-    width: 60vw; 
-  }
-
   .project-container {
-    flex-direction: column; 
+    flex-direction: column;
     height: auto;
-    margin-bottom: 20px;
+    padding: 15px;
   }
 
-  .project-info h2 {
-    font-size: 20px;
-  }
-
-  .project-info p {
-    font-size: 18px;
+  .project-info {
+    order: 1;
+    width: 100%;
   }
 
   .project-image {
-    flex: 0 0 60%;
-    margin-bottom: 20px; 
+    order: 2;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
   }
 
-  .project-container img {
-    max-width: 100%;
-    height: auto; 
-  }
-
-  .image img {
-    max-width: 90%; 
+  .github-link {
+    bottom: 10px;
+    left: 10px;
+    font-size: clamp(16px, 2vw, 32px); /* Adjust font size for smaller screens */
   }
 }
 
@@ -308,73 +284,27 @@ footer {
     font-size: 20px;
   }
 
-  .image img {
-    width: 70vw; 
-  }
-
   .project-container {
-    flex-direction: column; 
+    flex-direction: column;
     height: auto;
     margin-bottom: 20px;
   }
 
-  .project-info h2 {
-    font-size: 18px;
-  }
-
-  .project-info p {
-    font-size: 16px;
+  .project-info {
+    order: 1;
+    width: 100%;
   }
 
   .project-image {
-    flex: 0 0 70%;
-    margin-bottom: 15px; /* Space between image and text */
-  }
+    order: 2;
+    width: 100%;
+    padding: 5px;
+    margin: 20px;
+    }
 
-  .project-container img {
-    max-width: 100%;
-    height: auto; /* Ensure the image scales proportionally */
-  }
-
-  .image img {
-    max-width: 80%; /* Further shrink main image */
-  }
-}
-
-/* For screens smaller than 400px */
-@media (max-width: 400px) {
-  .FrontPageTitle h1 {
-    font-size: 40px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .project-container {
-    flex-direction: column; /* Stack project container vertically */
-    height: auto;
-  }
-
-  .project-info h2 {
-    font-size: 16px;
-  }
-
-  .project-info p {
-    font-size: 14px;
-  }
-
-  .project-image {
-    flex: 0 0 80%;
-    margin-bottom: 10px; /* Space between image and text */
-  }
-
-  .project-container img {
-    max-width: 100%;
-    height: auto; /* Ensure the image scales proportionally */
-  }
-
-  .image img {
-    max-width: 70%; /* Main image gets even smaller */
+  .github-link {
+    bottom: 10px;
+    left: 10px;
+    font-size: clamp(14px, 2vw, 70px); /* Adjust font size for smaller screens */
   }
 }

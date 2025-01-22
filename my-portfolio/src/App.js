@@ -1,15 +1,13 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { Typewriter } from 'react-simple-typewriter'
+import React, { useEffect } from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 import JobExperience from './JobEx';
 import './styles/App.css';
-import me from './images/me.jpg'; import wordie2Image from './images/Wordie2.png';
+import me from './images/me.jpg';
+import wordie2Image from './images/Wordie2.png';
 import cpp1 from './images/cpp1.png';
 import GPT2 from './images/GPT2.jpg';
 import HighPerformanceVoxelEngine from './images/HighPerformanceVoxelEngine.png';
 import inl from './images/inl.png';
-
-
 
 function App() {
   const experiences = [
@@ -24,10 +22,10 @@ function App() {
         ' Reduced storage necessity on HPC by over 90%',
         " Allow for Computation Methods and Mechanics team to access output files ran from daily simulation tests spanning over 5 years in an organized fashion, acting like a historical archive, in essence."
       ],
-    }];
+    }
+  ];
 
   useEffect(() => {
-
     // Add a scroll event listener
     const handleScroll = () => {
       const elements = document.querySelectorAll('.reveal-on-scroll');
@@ -58,6 +56,7 @@ function App() {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
+
   return (
     <>
       <NameTitle />
@@ -70,19 +69,19 @@ function App() {
             <img src={me} alt="myProfileImage" />
           </div>
         </div>
-      </div> 
+      </div>
 
       {/* Job Experience Section */}
-      <div className="container continuation reveal-on-scroll" style={{alignContent: 'center'}}>
+      <div className="container continuation reveal-on-scroll">
         <p>Work Experience</p>
       </div>
-      <div className="main-page container continuation reveal-on-scroll" style={{alignContent: 'center'}}>
+      <div className="main-page container continuation reveal-on-scroll" style={{ alignContent: 'center' }}>
         {experiences.map((exp, index) => (
           <div className="job-experience-container" key={index}>
             <div style={{ flex: 1 }}>
               <JobExperience
                 title={exp.title}
-                logo = {inl}
+                logo={inl}
                 company={exp.company}
                 duration={exp.duration}
                 description={exp.description}
@@ -92,71 +91,69 @@ function App() {
         ))}
       </div>
 
-      <div className="container continuation reveal-on-scroll" style={{alignItems : 'Center'}}>
+      <div className="container continuation reveal-on-scroll">
         <p> Below are some Projects I am either working on or have currently done both independently and in a team:</p>
       </div>
 
-      <div className=" main-page container projectCards">
-          <div className="projects-list reveal-on-scroll">
-            <Project
-              title={<h1>High Performance Voxel Game Engine</h1>}
-              description="Collaborated with a colleague and a faculty advisor in creating a voxel game engine using C++ and the BGFX rendering library. The primary focus of the engine is to test out different optimization techniques and rendering algorithms to 
-              achieve high performance in chunk generation and frame rates, and benchmarking which techniques are the most effective in improving performance. The engine will also include lighting and shadowing techniques, as well as a physics engine to simulate destruction and creation.
-              Although this was our capstone project, we both still plan to continue to develop it outside of our senior year, and it will be updated as time goes on, when either of us have free time and the motivation."
-              imagePath={HighPerformanceVoxelEngine}
-              githubUrl={"https://github.com/athaun/voxel-engine"}
-            />
-          </div>
-          <div className="projects-list reveal-on-scroll">
-            <Project
-              title={<h1>Python Wordle Clone</h1>}
-              description="A Python project that clones the Wordle game."
-              imagePath={wordie2Image}
-              githubUrl={"https://github.com/viccon23/WordleGamepy"}
-            />
-          </div>
-          <div className="projects-list reveal-on-scroll">
-            <Project
-              title={<h1>ChatGPT Discord Bot</h1>}
-              description="Utilizing OpenAI's API, this custom made Discord bot will answer prompts from users who send messages through a text channel."
-              imagePath={GPT2}
-              githubUrl={"https://github.com/viccon23/GPTBot"}
-            />
-          </div>
-          <div className="projects-list reveal-on-scroll">
-            <Project
-              title={<h1>Music Playlist Management System</h1>}
-              description="Create a Playlist, add or remove tracks, move tracks around playlist, toggle as favorite, and more in this C++ Music Management System using vectors and linked lists."
-              imagePath={cpp1}
-              githubUrl={"https://github.com/viccon23/Music-Playlist"}
-            />
-          </div>
-      </div>
-
-    <div className="continuation reveal-on-scroll" style = {{display: 'flex', width: '85%', justifyContent: 'center', alignItems: 'center', margin: '0 auto'}}></div>
-
-    <footer>
-      <div className="footer-content">
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/viccon23" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
-          <a href="mailto:victor.contreras23@aol.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
-          <a href="https://github.com/viccon23" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+      <div className="main-page container projectCards">
+        <div className="projects-list reveal-on-scroll">
+          <Project
+            title={<h1>High Performance Voxel Game Engine</h1>}
+            description="Collaborated with a colleague and a faculty advisor in creating a voxel game engine using C++ and the BGFX rendering library. The primary focus of the engine is to test out different optimization techniques and rendering algorithms to 
+              achieve high performance in chunk generation and frame rates, and benchmarking which techniques are the most effective in improving performance. The engine will also include lighting and shadowing techniques, as well as a physics engine to simulate destruction and creation. Still in development."
+            githubUrl={"https://github.com/athaun/voxel-engine"}
+            imagePath={HighPerformanceVoxelEngine}
+          />
+        </div>
+        <div className="projects-list reveal-on-scroll">
+          <Project
+            title={<h1>Python Wordle Clone</h1>}
+            description="A Python project that clones the Wordle game."
+            imagePath={wordie2Image}
+            githubUrl={"https://github.com/viccon23/WordleGamepy"}
+          />
+        </div>
+        <div className="projects-list reveal-on-scroll">
+          <Project
+            title={<h1>ChatGPT Discord Bot</h1>}
+            description="Utilizing OpenAI's API, this custom made Discord bot will answer prompts from users who send messages through a text channel."
+            imagePath={GPT2}
+            githubUrl={"https://github.com/viccon23/GPTBot"}
+          />
+        </div>
+        <div className="projects-list reveal-on-scroll">
+          <Project
+            title={<h1>Music Playlist Management System</h1>}
+            description="Create a Playlist, add or remove tracks, move tracks around playlist, toggle as favorite, and more in this C++ Music Management System using vectors and linked lists."
+            imagePath={cpp1}
+            githubUrl={"https://github.com/viccon23/Music-Playlist"}
+          />
         </div>
       </div>
-    </footer>
+
+      <div className="continuation reveal-on-scroll"></div>
+
+      <footer>
+        <div className="footer-content">
+          <div className="social-icons">
+            <a href="https://www.linkedin.com/in/viccon23" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+            <a href="mailto:victor.contreras23@aol.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
+            <a href="https://github.com/viccon23" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
 
 export default App;
 
-
 function Introduction() {
   return (
     <>
       <p>
-    Hello, my name is Victor and I'm a Computer Science student at UTRGV. This website began on April 29, 2023, and will be continually updated to feature personal projects and anything new that is well.... worth including in a personal website.
-    I am currently interested in fields such as Networking, Web Development, Software Engineering and Machine Learning.
+        Hello, my name is Victor and I'm a Computer Science student at UTRGV. This website began on April 29, 2023, and will be continually updated to feature personal projects and anything new that is well.... worth including in a personal website.
+        I am currently interested in fields such as Networking, Web Development, Software Engineering and Machine Learning.
       </p>
 
       <p>
@@ -169,15 +166,15 @@ function Introduction() {
         This website is still in construction, and as time passes, more features will be added.
       </p>
     </>
-  )
-};
+  );
+}
 
 function NameTitle() {
   return (
     <div className='FrontPageTitle'>
       <h1 style={{ paddingTop: '1rem', margin: 'auto 0', fontWeight: 'normal' }}>
         {' '}
-        <span style={{fontWeight: 'bold' }}>
+        <span style={{ fontWeight: 'bold' }}>
           <Typewriter
             words={['Victor Contreras']}
             loop={true}
@@ -190,20 +187,24 @@ function NameTitle() {
         </span>
       </h1>
     </div>
-  )
-};
+  );
+}
 
 function Project({ title, description, imagePath, githubUrl }) {
   return (
     <div className="project-container">
-        <div className="project-info">
-          <h2>{title}</h2>
-          <p>{description}</p>
+      <div className="project-info">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div className="project-image">
+        <img src={imagePath} alt={title} />
+      </div>
+      {githubUrl && (
+        <div className="github-link-container">
+          <GitHubLink url={githubUrl} />
         </div>
-        {githubUrl && <GitHubLink url={githubUrl} />}
-        <div className="project-image">
-            <img src={imagePath} alt={title} />
-          </div>
+      )}
     </div>
   );
 }
@@ -213,10 +214,8 @@ function GitHubLink({ url }) {
     <div className="github-link">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <i className="fa fa-github" style={{ fontSize: '70px' }}></i>
+        <i className="fa fa-github"></i>
       </a>
     </div>
   );
 }
-
-
