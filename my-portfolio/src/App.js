@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import JobExperience from './JobEx';
 import './styles/App.css';
 import me from './images/me.jpg';
+import inl from './images/inl.png';
 import wordie2Image from './images/Wordie2.png';
 import cpp1 from './images/cpp1.png';
 import GPT2 from './images/GPT2.jpg';
 import HighPerformanceVoxelEngine from './images/HighPerformanceVoxelEngine.png';
-import inl from './images/inl.png';
 
 function App() {
+  const [projects, setProjects] = useState([]);
+  const [visibleProjects, setVisibleProjects] = useState(0);
   const experiences = [
     {
       title: 'Database Developer Intern',
@@ -26,21 +28,51 @@ function App() {
   ];
 
   useEffect(() => {
-    // Add a scroll event listener
+    const fetchedProjects = [
+      {
+        title: 'High Performance Voxel Game Engine',
+        description: "Collaborated on creating a voxel game engine using C++ and BGFX. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates. Includes lighting, shadows and physics engine.",
+        imagePath: HighPerformanceVoxelEngine,
+        githubUrl: 'https://github.com/athaun/voxel-engine'
+      },
+      {
+        title: 'Python Wordle Clone',
+        description: 'A Python project that clones the Wordle game.',
+        imagePath: wordie2Image,
+        githubUrl: 'https://github.com/viccon23/WordleGamepy'
+      },
+      {
+        title: 'ChatGPT Discord Bot',
+        description: "Utilizing OpenAI's API, this custom made Discord bot will answer prompts from users who send messages through a text channel.",
+        imagePath: GPT2,
+        githubUrl: 'https://github.com/viccon23/GPTBot'
+      },
+      {
+        title: 'Music Playlist Management System',
+        description: 'Create a Playlist, add or remove tracks, move tracks around playlist, toggle as favorite, and more in this C++ Music Management System using vectors and linked lists.',
+        imagePath: cpp1,
+        githubUrl: 'https://github.com/viccon23/Music-Playlist'
+      }
+    ];
+    setProjects(fetchedProjects);
+
     const handleScroll = () => {
       const elements = document.querySelectorAll('.reveal-on-scroll');
-
       elements.forEach((element) => {
         if (isElementInViewport(element)) {
           element.classList.add('visible');
         }
       });
+
+      // Infinite scroll logic
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+        setVisibleProjects((prevVisibleProjects) => Math.min(prevVisibleProjects + 2, fetchedProjects.length));
+      }
     };
 
-    // Attach the event listener
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -48,11 +80,11 @@ function App() {
 
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect();
-
+    const threshold = 100; // Pixels above viewport to trigger
     return (
-      rect.top >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) + threshold &&
+      rect.bottom >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
@@ -71,14 +103,13 @@ function App() {
         </div>
       </div>
 
-      {/* Job Experience Section */}
       <div className="container continuation reveal-on-scroll">
         <p>Work Experience</p>
       </div>
-      <div className="main-page container continuation reveal-on-scroll" style={{ alignContent: 'center' }}>
+      <div className="main-page container continuation reveal-on-scroll">
         {experiences.map((exp, index) => (
           <div className="job-experience-container" key={index}>
-            <div style={{ flex: 1 }}>
+            <div>
               <JobExperience
                 title={exp.title}
                 logo={inl}
@@ -96,39 +127,16 @@ function App() {
       </div>
 
       <div className="main-page container projectCards">
-        <div className="projects-list reveal-on-scroll">
-          <Project
-            title={<h1>High Performance Voxel Game Engine</h1>}
-            description="Collaborated with a colleague and a faculty advisor in creating a voxel game engine using C++ and the BGFX rendering library. The primary focus of the engine is to test out different optimization techniques and rendering algorithms to 
-              achieve high performance in chunk generation and frame rates, and benchmarking which techniques are the most effective in improving performance. The engine will also include lighting and shadowing techniques, as well as a physics engine to simulate destruction and creation. Still in development."
-            githubUrl={"https://github.com/athaun/voxel-engine"}
-            imagePath={HighPerformanceVoxelEngine}
-          />
-        </div>
-        <div className="projects-list reveal-on-scroll">
-          <Project
-            title={<h1>Python Wordle Clone</h1>}
-            description="A Python project that clones the Wordle game."
-            imagePath={wordie2Image}
-            githubUrl={"https://github.com/viccon23/WordleGamepy"}
-          />
-        </div>
-        <div className="projects-list reveal-on-scroll">
-          <Project
-            title={<h1>ChatGPT Discord Bot</h1>}
-            description="Utilizing OpenAI's API, this custom made Discord bot will answer prompts from users who send messages through a text channel."
-            imagePath={GPT2}
-            githubUrl={"https://github.com/viccon23/GPTBot"}
-          />
-        </div>
-        <div className="projects-list reveal-on-scroll">
-          <Project
-            title={<h1>Music Playlist Management System</h1>}
-            description="Create a Playlist, add or remove tracks, move tracks around playlist, toggle as favorite, and more in this C++ Music Management System using vectors and linked lists."
-            imagePath={cpp1}
-            githubUrl={"https://github.com/viccon23/Music-Playlist"}
-          />
-        </div>
+        {projects.slice(0, visibleProjects).map((project, index) => (
+          <div className="projects-list reveal-on-scroll" key={index}>
+            <Project
+              title={<h1>{project.title}</h1>}
+              description={project.description}
+              imagePath={project.imagePath}
+              githubUrl={project.githubUrl}
+            />
+          </div>
+        ))}
       </div>
 
       <div className="continuation reveal-on-scroll"></div>

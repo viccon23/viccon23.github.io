@@ -69,15 +69,11 @@ a:focus {
   margin-bottom: 150px;
 }
 
-.content {
-  margin-right: 25px;
-  margin-left: 25px;
-}
 
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 2s, transform 2s;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .reveal-on-scroll.visible {
@@ -85,9 +81,18 @@ a:focus {
   transform: translateY(0);
 }
 
+
 .continuation p {
-  font-size: 70px;
+  font-size: clamp(24px, 5vw, 70px);
+  margin: 20px 0;
+  text-align: center;
 }
+
+.job-experience-container {
+  border-radius: 8px;
+  background: linear-gradient(128deg, rgb(71, 197, 255) 0%, rgb(61, 127, 250) 35%, rgb(0, 183, 255) 100%);
+}
+
 
 .projectCards {
   display: flex;
@@ -108,9 +113,11 @@ a:focus {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.466);
   transition: transform 0.3s ease-in-out;
-  height: 700px;
   width: 100%;
   background: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(64,64,65,1) 35%, rgba(0,0,0,1) 100%);
+  min-height: 200px;
+  height: 700px;
+  overflow: hidden;
 }
 
 .project-container:hover {
@@ -120,14 +127,14 @@ a:focus {
 .project-info h2 {
   padding-left: 30px;
   color: #ffffff;
-  font-size: clamp(16px, 2vw, 30px); /* Dynamically adjust font size */
+  font-size: clamp(16px, 2vw, 30px);
   position: relative;
   display: flex;
 }
 
 .project-info p {
   color: #ffffff;
-  font-size: clamp(14px, 1.5vw, 28px); /* Dynamically adjust font size */
+  font-size: clamp(14px, 1.5vw, 28px); 
   padding-left: 30px;
   margin-bottom: 80px;
 }
@@ -138,7 +145,6 @@ a:focus {
   width: 100%;
   display: flex;
   justify-content: right;
-
 }
 
 .github-link {
@@ -149,7 +155,7 @@ a:focus {
 }
 
 .github-link i {
-  font-size: clamp(20px, 2vw, 50px); /* Dynamically adjust font size */
+  font-size: clamp(20px, 2vw, 50px); 
 }
 
 .project-container img {
@@ -206,7 +212,6 @@ footer {
   }
 }
 
-/* For screens smaller than 900px */
 @media (max-width: 900px) {
   .FrontPageTitle h1 {
     font-size: 80px;
@@ -235,11 +240,10 @@ footer {
   .github-link {
     bottom: 10px;
     left: 10px;
-    font-size: clamp(18px, 2vw, 36px); /* Adjust font size for smaller screens */
+    font-size: clamp(18px, 2vw, 36px); 
   }
 }
 
-/* For screens smaller than 768px */
 @media (max-width: 768px) {
   .FrontPageTitle h1 {
     font-size: 60px;
@@ -270,41 +274,55 @@ footer {
   .github-link {
     bottom: 10px;
     left: 10px;
-    font-size: clamp(16px, 2vw, 32px); /* Adjust font size for smaller screens */
+    font-size: clamp(16px, 2vw, 32px); 
   }
 }
 
-/* For screens smaller than 576px */
 @media (max-width: 576px) {
-  .FrontPageTitle h1 {
-    font-size: 50px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
   .project-container {
     flex-direction: column;
+    padding: 15px;
+    margin-bottom: 30px;
     height: auto;
-    margin-bottom: 20px;
+    min-height: 300px;
   }
 
   .project-info {
     order: 1;
     width: 100%;
+    padding: 10px;
+  }
+
+  .project-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .project-info p {
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .project-image {
     order: 2;
     width: 100%;
+    height: 200px;
     padding: 5px;
-    margin: 20px;
-    }
+    margin: 10px 0;
+  }
 
-  .github-link {
-    bottom: 10px;
-    left: 10px;
-    font-size: clamp(14px, 2vw, 70px); /* Adjust font size for smaller screens */
+  .project-image img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .continuation p {
+    font-size: 24px;
+    margin: 20px 0;
   }
 }
