@@ -19,10 +19,10 @@ function App() {
       company: 'Idaho National Lab',
       duration: 'May 2024 - August 2024',
       description: [
-        ' Developed a SQL database using Python, implementing methods for continual data integration and resolving errors in testing and quality assurance. Heavy use of Linux environment.',
-        " Designed a script that would transfer necessary files from the INL Sawtooth HPC into an organized directory, while simultaneously being written to database information about it's new file location as well as other data",
-        ' Reduced storage necessity on HPC by over 90%',
-        " Allow for Computation Methods and Mechanics team to access output files ran from daily simulation tests spanning over 5 years in an organized fashion, acting like a historical archive, in essence."
+        " Developed a SQL database using Python to automate data integration and resolve errors during testing and quality assurance in a Linux environment.",
+        " Created a script to transfer and organize files from the INL Sawtooth HPC, while recording metadata (file location, assessment, file type, etc.) in the database for future access using Pandas and CSV modules",
+        " Reduced storage requirements for output files on HPC by over 90%, saving over 200TB of storage space.",
+        " Enabled the team to efficiently access historical simulation test output files spanning over five years, improving the team's ability to analyze and compare data."
       ],
     }
   ];
@@ -31,7 +31,7 @@ function App() {
     const fetchedProjects = [
       {
         title: 'High Performance Voxel Game Engine',
-        description: "Collaborated on creating a voxel game engine using C++ and BGFX. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates. Includes lighting, shadows and physics engine.",
+        description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates. In the process of finetuning lighting and adding shadows.",
         imagePath: HighPerformanceVoxelEngine,
         githubUrl: 'https://github.com/athaun/voxel-engine'
       },
@@ -80,7 +80,7 @@ function App() {
 
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect();
-    const threshold = 100; // Pixels above viewport to trigger
+    const threshold = 200; // Pixels above viewport to trigger
     return (
       rect.top <= (window.innerHeight || document.documentElement.clientHeight) + threshold &&
       rect.bottom >= 0 &&
