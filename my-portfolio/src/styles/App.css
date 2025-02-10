@@ -4,15 +4,15 @@ html {
 
 .mainPage {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
 }
 
 body {
   margin: 10px;
   padding: 15px;
-  font-size: 4vw; 
+  font-size: 6vw; 
 }
 
 .image img {
@@ -21,16 +21,12 @@ body {
   max-width: 600px; 
 }
 
+
 .FrontPageTitle h1 {
   font-family: monospace;
-  padding-bottom: 50px;
   width: 100%;
   box-sizing: content-box;
   position: relative;
-  font-size: 10vw;
-}
-
-.FrontPageTitle h1 {
   color: #ffffff;
   font-size: 120px;
   margin: 0;
@@ -40,7 +36,8 @@ body {
 p {
   font-family: monospace;
   color: #fff;
-  font-size: 1.5vw; 
+  font-size: 40px; 
+  padding-right: 15px;
 }
 
 a {
@@ -124,6 +121,12 @@ a:focus {
   transform: scale(1.05);
 }
 
+.project-container img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 3%;
+}
+
 .project-info h2 {
   padding-left: 30px;
   color: #ffffff;
@@ -152,16 +155,7 @@ a:focus {
   bottom: 10px;
   left: 30px;
   padding-top: 20px;
-}
-
-.github-link i {
   font-size: clamp(20px, 2vw, 50px); 
-}
-
-.project-container img {
-  max-width: 100%;
-  height: 100%;
-  border-radius: 3%;
 }
 
 footer {
@@ -177,18 +171,9 @@ footer {
 .social-icons {
   margin-top: 20px;
   font-size: 50px;
-}
-
-.social-icons a {
   margin: 0 30px;
   text-decoration: none;
-}
-
-.social-icons {
   font-size: 30px;
-}
-
-.social-icons a {
   margin: 0 10px;
 }
 

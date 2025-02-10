@@ -160,18 +160,14 @@ function Introduction() {
   return (
     <>
       <p>
-        Hello, my name is Victor and I'm a Computer Science student at UTRGV. This website began on April 29, 2023, and will be continually updated to feature personal projects and anything new that is well.... worth including in a personal website.
-        I am currently interested in fields such as Networking, Web Development, Software Engineering and Machine Learning.
+        Hello, my name is Victor and I'm a Computer Science graduate student at UTRGV. This website began on April 29, 2023, and will be continually updated to feature personal projects and anything new that I add.
+        I've been engaged in different fields such as Computer Networks, Game Development, Web Development, and am now narrowing down my focus on Deep Learning and Data Science.
       </p>
 
       <p>
         I started my journey in August of 2022 at the University of Texas Rio Grande Valley, persuing a Bachelors of Science in Computer Science. In December of 2024, I graduated and am now persuing a Masters Degree in Computer Science. 
-        I have been involved in various projects, both independently and in a team, and in these short two years of solely taking core Computer Science/ Math courses, I have grown and learned so much, and to say my life has changed (positively) is an understatement.
-        I am always looking for new opportunities to learn and grow as a developer, and I am very excited to see where my journey will take me as I tackle on more challenges both in school and in the workforce.
-      </p>
-
-      <p>
-        This website is still in construction, and as time passes, more features will be added.
+        I have been involved in various projects, both independently and in a team. I am always looking for new opportunities to learn and grow as a developer, and I am very excited to see where my journey will take me as I tackle on more 
+        challenges both in school and in the workforce.
       </p>
     </>
   );
