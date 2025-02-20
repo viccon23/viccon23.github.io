@@ -1,0 +1,36 @@
+.research-container {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .research-content {
+    background: rgba(0, 255, 64, 0.1);
+    border: 2px solid #00ff40;
+    padding: 40px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .construction-text {
+    color: #00ff40;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .focus-text {
+    color: #00ff40;
+    font-size: 1em;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

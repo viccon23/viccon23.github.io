@@ -1,21 +1,38 @@
-html {
-  background: rgb(34, 34, 34);
+html, body {
+  background: rgb(0, 0, 0);
 }
 
+
 .mainPage {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  width: 100%;
+}
+
+.content {
+  padding-left: 1vw;
+  padding-right: 20vw;
 }
 
 body {
-  margin: 10px;
   padding: 15px;
-  font-size: 4vw; 
+  font-size: clamp(1vw, 2.5vw, 4vw);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .image img {
+  flex: 0 0 auto;
+  margin-right: 4vw; 
   border-radius: 25%;
   width: 30vw; 
   max-width: 600px; 
@@ -23,19 +40,40 @@ body {
 
 
 .FrontPageTitle h1 {
-  font-family: monospace;
   width: 100%;
   box-sizing: content-box;
   position: relative;
-  color: #ffffff;
+  color: #00ff40;
   font-size: 120px;
   margin: 0;
-  border-bottom: 2px solid rgb(75, 75, 75);
+  border-bottom: 2px solid #00ff40;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #00ff40;
+  color: #00ff40;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background-color 0.5s ease;
+}
+
+.button:hover {
+  background-color: rgba(0, 255, 64, 0.2);
 }
 
 p {
-  font-family: monospace;
-  color: #fff;
+  color: #00ff40;
   font-size: 40px; 
   padding-right: 15px;
 }
@@ -43,7 +81,7 @@ p {
 a {
   -webkit-transition: border-color 200ms ease, color 200ms ease;
   transition: border-color 200ms ease, color 200ms ease;
-  color: #fff;
+  color: #00ff40;
   text-decoration: none;
 }
 
@@ -57,16 +95,6 @@ a:focus {
   color: gold;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 85%;
-  margin: 0 auto;
-  margin-bottom: 150px;
-}
-
-
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(20px);
@@ -79,73 +107,10 @@ a:focus {
   align-items: center;
 }
 
-
 .continuation p {
   font-size: clamp(24px, 5vw, 70px);
   margin: 20px 0;
   text-align: center;
-}
-
-.job-experience-container {
-  border-radius: 8px;
-  background: linear-gradient(128deg, rgb(71, 197, 255) 0%, rgb(61, 127, 250) 35%, rgb(0, 183, 255) 100%);
-}
-
-.projectCards {
-  padding: 2vw;
-  flex-direction: column;
-}
-
-.projects-list {
-  width: 80%; 
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.project-container {
-  font-family: monospace;
-  display: flex;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.466);
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-  background: linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(64,64,65,1) 35%, rgba(0,0,0,1) 100%);
-  min-height: 200px;
-  height: 650px;
-}
-
-.project-container:hover {
-  transform: scale(1.05);
-}
-
-.project-info {
-  order: 0;
-  width: 65%;
-  flex-direction: column;
-}
-
-.project-info h2 {
-  padding-left: 30px;
-  color: #ffffff;
-  font-size: clamp(16px, 2vw, 30px);
-  position: relative;
-  display: flex;
-}
-
-.project-info p {
-  color: #ffffff;
-  font-size: clamp(14px, 1.5vw, 28px); 
-  padding-left: 30px;
-  margin-bottom: 80px;
-}
-
-.project-image {
-  padding: 20px;
-  flex: 0 0 40%;
-  display: flex;
-  justify-content: right;
 }
 
 .github-link {
@@ -157,172 +122,4 @@ a:focus {
 
 .github-link i {
   font-size: clamp(20px, 2vw, 50px); 
-}
-
-.project-container img {
-  width:100%;
-  object-fit: contain;
-  align-items: right;
-  height: 100%;
-  border-radius: 3%;
-}
-
-footer {
-  border-top: 1px solid #ddd;
-  margin: 10px;
-}
-
-.footer-content {
-  max-width: 100%;
-  text-align: center;
-}
-
-.social-icons {
-  margin-top: 20px;
-  font-size: 50px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.social-icons {
-  font-size: 30px;
-}
-
-
-@media (max-width: 1200px) {
-  .FrontPageTitle h1 {
-    font-size: 8vw; 
-  }
-
-  p {
-    font-size: 2.5vw;
-  }
-
-  .project-container {
-    flex-direction: row;
-    height: auto;
-  }
-
-  .project-image {
-    flex: 0 0 45%;
-    margin: 20px;
-  }
-}
-
-@media (max-width: 900px) {
-  .FrontPageTitle h1 {
-    font-size: 80px;
-  }
-
-  p {
-    font-size: 28px;
-  }
-
-  .project-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .project-info {
-    order: 1;
-    width: 100%;
-  }
-
-  .project-image {
-    order: 2;
-    width: 100%;
-    margin: 20px;
-  }
-
-  .github-link {
-    bottom: 10px;
-    left: 10px;
-    font-size: clamp(18px, 2vw, 36px); 
-  }
-}
-
-@media (max-width: 768px) {
-  .FrontPageTitle h1 {
-    font-size: 60px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
-  .project-container {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-  }
-
-  .project-info {
-    order: 1;
-    width: 100%;
-  }
-
-  .project-image {
-    order: 2;
-    width: 100%;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  .github-link {
-    bottom: 10px;
-    left: 10px;
-    font-size: clamp(16px, 2vw, 32px); 
-  }
-}
-
-@media (max-width: 576px) {
-  .project-container {
-    flex-direction: column;
-    padding: 15px;
-    margin-bottom: 30px;
-    height: auto;
-    min-height: 300px;
-  }
-
-  .project-info {
-    order: 1;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .project-info h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .project-info p {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .project-image {
-    order: 2;
-    width: 100%;
-    height: 200px;
-    padding: 5px;
-    margin: 10px 0;
-  }
-
-  .project-image img {
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  .reveal-on-scroll {
-    opacity: 1;
-    transform: none;
-  }
-
-  .continuation p {
-    font-size: 24px;
-    margin: 20px 0;
-  }
 }

@@ -1,0 +1,39 @@
+.page-wrapper {
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0; /* Prevents footer from shrinking */
+  position: relative; /* Remove fixed positioning */
+  width: 100%;
+  border-top: 1px solid #00ff40;
+  background: rgb(0, 0, 0);
+}
+
+.footer-content {
+  position: relative;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #00ff40;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: gold;
+}

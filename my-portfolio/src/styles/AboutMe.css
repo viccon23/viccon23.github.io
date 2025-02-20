@@ -1,0 +1,76 @@
+.about-me-container {
+  color: #00ff40;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.FrontPageTitle h1 {
+  width: 100%;
+  box-sizing: content-box;
+  position: relative;
+  color: #00ff40;
+  font-size: 120px;
+  margin: 0;
+  border-bottom: 2px solid #00ff40;
+}
+
+.content-container {
+  width: 50%;
+  padding-left: 1vw;
+  padding-right: 20vw;
+}
+
+.bio-text p {
+  text-align: left;
+  color: #00ff40;
+  font-size: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 0; /* Ensure no left margin */
+}
+
+  
+  /* .image-collage {
+    flex: 1;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    text-align: right; /* Align images to the right
+  }
+  
+  .collage-image {
+    position: absolute;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .collage-image:hover {
+    transform: scale(1.1);
+  } 
+  */
+  
+  /* .image1 {
+    top: -10%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .image2 {
+    top: 70%;
+    right: 40%;
+    z-index: 2;
+  }
+  
+  .image3 {
+    bottom: 60%;
+    left: 40%;
+    z-index: 3;
+  }
+  
+  .image4 {
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+  } */
