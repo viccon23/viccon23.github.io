@@ -109,10 +109,18 @@
 }
 
 .project-image {
+  display: flex;
+  justify-content: right; 
+  align-items: center;
   padding: 20px;
   flex: 0 0 40%;
-  display: flex;
-  justify-content: right;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: contain;
 }
 
 .github-link {

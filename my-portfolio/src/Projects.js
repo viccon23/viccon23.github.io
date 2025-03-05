@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import './styles/Projects.css';
 import NameTitle from './components/NameTitle';
 import Footer from './components/Footer';
+import ToDoList from './images/ToDoList.png';
 import HighPerformanceVoxelEngine from './images/HighPerformanceVoxelEngine.png';
+import Deepening from './images/Deepening.jpg';
 import wordie2Image from './images/Wordie2.png';
 import GPT2 from './images/GPT2.jpg';
 import cpp1 from './images/cpp1.png';
@@ -19,10 +21,22 @@ function Projects() {
 
   const projects = [
     {
+      title: 'ToDo List App',
+      description: 'My first full stack project, this is a task management application built with the MERN stack and also with Electron for desktop app deployment. Allows for cross-device synchronization through MongoDB Atlas cloud database. Basic CRUD operations for task management and a task categorization system for filtering tasks by type.',
+      imagePath: ToDoList,
+      githubUrl: 'https://github.com/viccon23/todo-list'
+    },
+    {
       title: 'High Performance Voxel Game Engine',
       description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates. Currently in the process of finetuning lighting and adding shadows.",
       imagePath: HighPerformanceVoxelEngine,
       githubUrl: 'https://github.com/athaun/voxel-engine'
+    },
+    {
+      title: 'The Deepening',
+      description: 'A 2D platformer game developed in Unity. The game features a deep sea diver operating a submarine who must navigate through the ocean depths while avoiding obstacles and enemies while collecting scrap to upgrade their submarine and find a lost ship containing a lost family heirloom.',
+      imagePath: Deepening,
+
     },
     {
       title: 'Python Wordle Clone',
@@ -60,11 +74,13 @@ function Projects() {
                   <div className="project-image">
                     <img src={project.imagePath} alt={project.title} />
                   </div>
-                  <div className="github-link">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <i className="fa fa-github"></i>
-                    </a>
-                  </div>
+                  {project.githubUrl && (
+                    <div className="github-link">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <i className="fa fa-github"></i>
+                      </a>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

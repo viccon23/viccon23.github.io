@@ -12,7 +12,6 @@ function NameTitle({ title }) {
             <span>
             <Typewriter
                 words={[title]}
-                loop={false}
                 cursor
                 cursorStyle='_'
                 typeSpeed={100}
