@@ -24,11 +24,12 @@
 }
 
 .job-experience-container {
+  background: rgba(0, 255, 64, 0.1);
   font-family: monospace;
   padding: 1rem;
-  background-color: #0d9fc4;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 195, 255, 0.774);
+  border: 2px solid #00ff40;
+  box-shadow: 0 2px 8px rgba(0, 255, 64, 0.1);
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.5s ease-out;
@@ -48,23 +49,23 @@
 .job-title {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #fff;
+  color: #00ff40;
 }
 
 .company-name {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #00ff40;
 }
 
 .duration {
   font-size: 1.1rem;
   font-style: italic;
-  color: #ffffff;
+  color: #00ff40;
 }
 
 .job-description li {
   font-size: 20px;
-  color: #ffffff;
+  color: #00ff40;
   line-height: 1.5;
 }
 
