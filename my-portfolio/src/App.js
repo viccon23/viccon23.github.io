@@ -51,7 +51,7 @@ function Introduction() {
     <>
       <p>
         Hello! My name is Victor Contreras and I'm a Computer Science graduate student at the University of Texas Rio Grande Valley. This website began on April 29, 2023, and will be continually updated to feature personal projects, work experience, areas of research and anything new that I add.
-        I've been engaged in different fields such as Computer Networks, Game Development, Web Development, and am now narrowing down my focus on Deep Learning and Data Science.
+        I'm a passionate student with a keen interest in software engineering and artificial intelligence. I have experience in web development, game development, and data mining, and I'm always eager to learn more as technology evolves.
       </p>
     </>
   );

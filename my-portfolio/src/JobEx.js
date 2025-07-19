@@ -19,6 +19,7 @@ function Experience() {
       title: 'Database Developer Intern',
       logo: inl,
       company: 'Idaho National Lab',
+      companyUrl: 'https://inl.gov/',
       duration: 'May 2024 - August 2024',
       description: [
         " Developed a SQL database using Python to automate data integration and resolve errors during testing and quality assurance in a Linux environment.",
@@ -42,6 +43,7 @@ function Experience() {
                     title={exp.title}
                     logo={exp.logo}
                     company={exp.company}
+                    companyUrl={exp.companyUrl}
                     duration={exp.duration}
                     description={exp.description}
                   />

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './styles/Projects.css';
 import NameTitle from './components/NameTitle';
 import Footer from './components/Footer';
+import CLIPassword from './images/CLIPassword.png';
 import ToDoList from './images/ToDoList.png';
 import HighPerformanceVoxelEngine from './images/HighPerformanceVoxelEngine.png';
 import Deepening from './images/Deepening.jpg';
@@ -15,11 +16,23 @@ function Projects() {
     cards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add('visible');
-      }, 200 * index); // Stagger the animations
+      }, 600 * index); // Stagger the animations
     });
   }, []);
 
   const projects = [
+    // {
+    //   title: 'ZeroToHire',
+    //   description: "ZeroToHire is an intelligent full-stack coding tutor that transforms LeetCode preparation through AI-guided learning. The application combines a React.js frontend with a Flask backend, utilizing a locally-hosted 13B-parameter language model that has been carefully prompt-engineered to teach through guided discovery rather than direct instruction. Users interact with an integrated Monaco code editor while receiving personalized hints, step-by-step guidance, and real-time feedback from an AI tutor that adapts its teaching style to each individual's learning pace. The platform runs entirely offline with GPU acceleration, ensuring fast response times and complete privacy while helping developers build genuine problem-solving skills for technical interviews. \n\n (Still being developed!)",
+    //   imagePath: null,
+    //   githubUrl: null,
+    // },
+    {
+      title: 'CLI Password Manager',
+      description: 'A command line interface password manager built with Python. It allows users to securely store and manage their passwords. The project emphasizes security best practices and user-friendly CLI interactions, and it was a great way for me to learning about encryption and secure password storage, such as hashing and the concept of salting passwords.',
+      imagePath: CLIPassword,
+      githubUrl: 'https://github.com/viccon23/CLI-Password-Manager'
+    },
     {
       title: 'ToDo List App',
       description: 'My first full stack project, this is a task management application built with the MERN stack and also with Electron for desktop app deployment. Allows for cross-device synchronization through MongoDB Atlas cloud database. Basic CRUD operations for task management and a task categorization system for filtering tasks by type.',
@@ -28,7 +41,7 @@ function Projects() {
     },
     {
       title: 'High Performance Voxel Game Engine',
-      description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates. Currently in the process of finetuning lighting and adding shadows.",
+      description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates.",
       imagePath: HighPerformanceVoxelEngine,
       githubUrl: 'https://github.com/athaun/voxel-engine'
     },

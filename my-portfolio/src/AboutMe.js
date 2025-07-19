@@ -17,12 +17,12 @@ function AboutMe() {
           <div className="content-container">
             <div className="bio-text">
               <p className="bio">
-                I started my programming journey in August 2022. I've dabbled in different electives
-                including web development, game development, Computer Networks, and Data Mining. I found myself to be interested in AI, specifically Deep Learning, and will be focusing on this field
-                through my masters prgram.
+                I was born in Brownsville, Texas, a city located "On the Border, by the Sea. I've always grown up with technology, and so
+                I developed a passion for it at a young age, but I had never took it upon myself to learn programming until I started my first semseter because of the heavy learning curve. Throughout my undergrad, I've dabbled in different electives
+                including Web Development, Game Development, Computer Networks, and Data Mining, and found myself to be interested specifically in artificial intelligence and software engineering.
               </p>
               <p className="bio">
-                When I'm not coding, you'll catch me at thrift shops or Mom-and-Pop stores. I'm a huge fan of vintage technology and a niche I have is collecting physical video games (Currently at 300) and merchandise. I also DJ as a hobby (Not professionally)
+                When I'm not coding, you'll catch me at thrift shops or Mom-and-Pop stores. I'm a huge fan of vintage technology and a niche I have is collecting physical video games (Currently >300) and video game collectibles. I also DJ as a hobby (Not professionally)
                 and mess around with DAW's for music production.
               </p>
             </div>
