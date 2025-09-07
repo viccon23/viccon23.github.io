@@ -3,11 +3,12 @@ import './styles/JobEx.css';
 import JobCard from './components/JobCard.js';
 import Footer from './components/Footer';
 import inl from './images/inl.png';
+import utrgv from './images/UTRGV.png';
 import NameTitle from './components/NameTitle';
 
 function Experience() {
   useEffect(() => {
-    const cards = document.querySelectorAll('.job-experience-container');
+    const cards = document.querySelectorAll('.job-card-wrapper');
     cards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add('visible');
@@ -15,6 +16,16 @@ function Experience() {
     });
   }, []);
   const experiences = [
+    {
+      title: 'Graduate Research Assistant',
+      logo: utrgv,
+      company: 'UT Rio Grande Valley',
+      companyUrl: 'https://www.utrgv.edu/',
+      duration: 'September 2025 - Present',
+      description: [
+        " Conducting research on Facial Affect Analysis using Graph Convolutional Networks (GCNs) for autonomous vehicles.",
+      ]
+    },
     {
       title: 'Database Developer Intern',
       logo: inl,
@@ -38,7 +49,7 @@ function Experience() {
           <div className="experience-container">
             <div className="job-content-container">
               {experiences.map((exp, index) => (
-                <div className="job-experience-container" key={index}>
+                <div className="job-card-wrapper" key={index}>
                   <JobCard
                     title={exp.title}
                     logo={exp.logo}

@@ -23,6 +23,18 @@
   width: 100%;
 }
 
+.job-card-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  margin-bottom: 50px;
+}
+
+.job-card-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .job-experience-container {
   background: rgba(0, 255, 64, 0.1);
   font-family: monospace;
@@ -30,14 +42,6 @@
   border-radius: 8px;
   border: 2px solid #00ff40;
   box-shadow: 0 2px 8px rgba(0, 255, 64, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-out;
-}
-
-.job-experience-container.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
   
 .job-header {

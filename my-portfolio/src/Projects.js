@@ -21,12 +21,12 @@ function Projects() {
   }, []);
 
   const projects = [
-    // {
-    //   title: 'ZeroToHire',
-    //   description: "ZeroToHire is an intelligent full-stack coding tutor that transforms LeetCode preparation through AI-guided learning. The application combines a React.js frontend with a Flask backend, utilizing a locally-hosted 13B-parameter language model that has been carefully prompt-engineered to teach through guided discovery rather than direct instruction. Users interact with an integrated Monaco code editor while receiving personalized hints, step-by-step guidance, and real-time feedback from an AI tutor that adapts its teaching style to each individual's learning pace. The platform runs entirely offline with GPU acceleration, ensuring fast response times and complete privacy while helping developers build genuine problem-solving skills for technical interviews. \n\n (Still being developed!)",
-    //   imagePath: null,
-    //   githubUrl: null,
-    // },
+    {
+      title: 'ZeroToHire',
+      description: "ZeroToHire is an intelligent full-stack website that transforms LeetCode preparation through AI-guided learning. The application combines a React.js frontend with a Flask backend, utilizing a locally-hosted language model that has been prompt-engineered to teach through guided discovery rather than direct instruction. Users interact with an integrated Monaco code editor while receiving personalized hints, step-by-step guidance, and real-time feedback from an AI tutor that adapts its teaching style to each individual's learning pace. The platform runs entirely offline with GPU acceleration, ensuring fast response times and complete privacy while helping developers build genuine problem-solving skills for technical interviews. \n\n (Still being developed!)",
+      imagePath: null,
+      githubUrl: 'https://github.com/viccon23/ZeroToHire',
+    },
     {
       title: 'CLI Password Manager',
       description: 'A command line interface password manager built with Python. It allows users to securely store and manage their passwords. The project emphasizes security best practices and user-friendly CLI interactions, and it was a great way for me to learning about encryption and secure password storage, such as hashing and the concept of salting passwords.',
