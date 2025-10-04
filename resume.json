@@ -1,0 +1,79 @@
+{
+  "basics": {
+    "name": "Victor Contreras",
+    "label": "Computer Science Graduate Student",
+    "email": "victor.contreras23[AT]aol.com",
+    "phone": "",
+    "url": "https://viccon23.github.io",
+    "summary": "Computer Science graduate student at UT Rio Grande Valley specializing in AI and Software Engineering",
+    "location": {
+      "city": "Brownsville",
+      "region": "Texas",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "viccon23",
+        "url": "https://www.linkedin.com/in/viccon23"
+      },
+      {
+        "network": "GitHub",
+        "username": "viccon23",
+        "url": "https://github.com/viccon23"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "UT Rio Grande Valley",
+      "position": "Graduate Research Assistant",
+      "startDate": "2025-09",
+      "summary": "Conducting research on Facial Affect Analysis using deep learning methods for affective autonomous vehicles.",
+      "highlights": []
+    },
+    {
+      "name": "Idaho National Lab",
+      "position": "Database Developer Intern",
+      "startDate": "2024-05",
+      "endDate": "2024-08",
+      "summary": "",
+      "highlights": [
+        "Developed SQL database using Python to automate data integration",
+        "Reduced storage requirements by over 90%, saving 200TB",
+        "Created file transfer and organization scripts for HPC",
+        "Enabled efficient access to 5+ years of historical simulation data"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas Rio Grande Valley",
+      "area": "Computer Science",
+      "studyType": "Master of Science",
+      "startDate": "2024-08",
+      "endDate": "Present"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "C++", "JavaScript", "Java"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "keywords": ["React", "Flask", "Unity", "MongoDB", "Git"]
+    },
+    {
+      "name": "Specializations",
+      "keywords": ["Artificial Intelligence", "Machine Learning", "Full-Stack Development", "Game Development", "Database Development"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ZeroToHire",
+      "description": "AI-guided LeetCode preparation platform with Flask backend and React frontend",
+      "url": "https://github.com/viccon23/ZeroToHire"
+    }
+  ]
+}
