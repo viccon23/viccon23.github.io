@@ -25,6 +25,7 @@ function NameTitle({ title }) {
             <Link to="/experience" className="button">Experience</Link>
             <Link to="/projects" className="button">Projects</Link>
             <Link to="/research" className="button">Research</Link>
+            <Link to="/contact" className="button">Contact</Link>
         </div>
         </div>
     </>

@@ -1,5 +1,6 @@
 html, body {
   background: rgb(0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 
@@ -14,14 +15,48 @@ html, body {
 
 .container {
   display: flex;
-  align-items: center; 
-  justify-content: flex-start; 
+  align-items: flex-start; 
+  justify-content: space-between; 
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
 .content {
-  padding-left: 1vw;
-  padding-right: 20vw;
+  flex: 1;
+  max-width: 60%;
+  padding-right: 20px;
+}
+
+/* Terminal window styling for introduction text */
+.terminal-window {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00ff40;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #00ff40;
+  color: #000;
+  padding: 12px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.terminal-content {
+  padding: 30px;
+  color: #00ff40;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-content p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: clamp(16px, 1.8vw, 20px);
 }
 
 body {
@@ -30,14 +65,23 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.image img {
+.image {
   flex: 0 0 auto;
-  margin-right: 4vw; 
-  border-radius: 25%;
-  width: 30vw; 
-  max-width: 600px; 
+  max-width: 35%;
 }
 
+.image img {
+  width: 100%; 
+  max-width: 400px; 
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.FrontPageTitle {
+  width: 100%;
+  margin-bottom: 30px;
+}
 
 .FrontPageTitle h1 {
   width: 100%;
@@ -47,22 +91,25 @@ body {
   font-size: 120px;
   margin: 0;
   border-bottom: 2px solid #00ff40;
+  text-align: center;
 }
 
 .button-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .button {
   background-color: transparent;
   border: 2px solid #00ff40;
   color: #00ff40;
-  padding: 20px 50px;
+  padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 50px);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 30px;
+  font-size: clamp(18px, 2.5vw, 30px);
   cursor: pointer;
   border-radius: 0;
   transition: background-color 0.5s ease;
@@ -122,4 +169,40 @@ a:focus {
 
 .github-link i {
   font-size: clamp(20px, 2vw, 50px); 
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .image {
+    max-width: 80%;
+    align-self: center;
+  }
+
+  .FrontPageTitle h1 {
+    font-size: clamp(60px, 10vw, 120px);
+  }
+
+  .button-container {
+    gap: 5px;
+  }
+
+  .button {
+    padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px);
+    font-size: clamp(14px, 3.5vw, 20px);
+  }
+
+  p {
+    font-size: clamp(18px, 4vw, 32px);
+  }
 }

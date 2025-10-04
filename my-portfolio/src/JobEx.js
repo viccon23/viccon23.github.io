@@ -23,7 +23,7 @@ function Experience() {
       companyUrl: 'https://www.utrgv.edu/',
       duration: 'September 2025 - Present',
       description: [
-        " Conducting research on Facial Affect Analysis using Graph Convolutional Networks (GCNs) for autonomous vehicles.",
+        " Conducting research on Facial Affect Analysis using deep learning methods for affective autonomous vehicles.",
       ]
     },
     {

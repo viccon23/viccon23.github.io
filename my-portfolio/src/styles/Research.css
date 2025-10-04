@@ -1,16 +1,17 @@
 .research-container {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   font-size: 0.8em;
   justify-content: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  border: 1px solid #00ff40; 
-
+  width: 100%;
+  max-width: 1200px;
+  border: 1px solid #00ff40;
+  padding: 0 20px;
 }
 
 .research-item-title {
@@ -42,5 +43,26 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .research-container {
+    padding: 0 15px;
+    margin-top: 20px;
+  }
+
+  .research-item-title {
+    width: 95%;
+  }
+
+  .research-item p {
+    width: 90%;
+    font-size: 0.6em;
+  }
+
+  .pdf-viewer-container {
+    width: 95%;
   }
 }

@@ -11,16 +11,19 @@
 }
 
 .job-content-container {
-  width: 50%;
-  padding-left: 1vw;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .experience-container {
-  padding-top: 100px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .job-card-wrapper {
@@ -74,8 +77,40 @@
 }
 
 .company-logo {
-  width: 15vw;
+  width: clamp(120px, 20vw, 300px);
   height: auto;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 0 15px;
+  }
+
+  .job-experience-container {
+    padding: 15px;
+  }
+
+  .job-title {
+    font-size: 1.4rem;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .duration {
+    font-size: 1rem;
+  }
+
+  .job-description li {
+    font-size: 16px;
+  }
+
+  .company-logo {
+    width: clamp(60px, 20vw, 120px);
+    max-width: 120px;
+  }
 }
