@@ -19,8 +19,6 @@ function ResumeDownload() {
         </div>
         <div className="resume-content">
           <p className="resume-intro">
-            {'>'} RESUME ACCESS GRANTED<br/>
-            {'>'} Select format to download:
           </p>
           <div className="download-buttons">
             <button 
@@ -41,8 +39,8 @@ function ResumeDownload() {
             </button> */}
           </div>
           <div className="resume-stats">
-            <p>{'>'} File Size: ~150KB</p>
-            <p>{'>'} Last Updated: October 2025</p>
+            <p>{'>'} File Size: 156KB</p>
+            <p>{'>'} Last Updated: November 2026</p>
             <p>{'>'} Format: Professional Resume</p>
           </div>
         </div>
