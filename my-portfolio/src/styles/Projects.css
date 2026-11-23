@@ -11,6 +11,7 @@
 }
 
 .project-card {
+  box-sizing: border-box;
   background: rgba(0, 255, 64, 0.1);
   border: 2px solid #00ff40;
   padding: 25px;
@@ -184,6 +185,10 @@
 }
 
 @media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
   .project-container {
     flex-direction: column;
     height: auto;
@@ -198,8 +203,9 @@
   .project-image {
     order: 2;
     width: 100%;
-    padding: 10px;
-    margin: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
 
   .github-link {
@@ -246,4 +252,8 @@
     max-height: 100%;
     object-fit: contain;
   }
+}
+
+.project-demo-link {
+  text-decoration: underline;
 }

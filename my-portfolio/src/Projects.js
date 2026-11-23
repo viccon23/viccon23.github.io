@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './styles/Projects.css';
 import NameTitle from './components/NameTitle';
 import Footer from './components/Footer';
+import AVProjectionExplorer from './images/AVProjectionExplorer.png';
 import CLIPassword from './images/CLIPassword.png';
 import ToDoList from './images/ToDoList.png';
 import HighPerformanceVoxelEngine from './images/HighPerformanceVoxelEngine.png';
@@ -22,6 +23,20 @@ function Projects() {
 
   const projects = [
     {
+      title: 'AV Projection Explorer',
+      description: 'I built this web app with React, TypeScript, and MapLibre to explore model-based projections of autonomous vehicle safety confidence and willingness to ride across 498 Census areas in Texas and California. The app lets you compare CatBoost and TabPFN on synchronized maps, inspect uncertainty and model disagreement, and download maps and aggregate results.',
+      imagePath: AVProjectionExplorer,
+      imageAlt: 'Side-by-side CatBoost and TabPFN maps of projected safety confidence in California',
+      githubUrl: 'https://github.com/viccon23/av_projection_explorer',
+      demoUrl: 'https://viccon23.github.io/av_projection_explorer/',
+    },
+    {
+      title: 'High Performance Voxel Game Engine',
+      description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates.",
+      imagePath: HighPerformanceVoxelEngine,
+      githubUrl: 'https://github.com/athaun/voxel-engine'
+    },
+    {
       title: 'ZeroToHire',
       description: "ZeroToHire is an intelligent full-stack website that transforms LeetCode preparation through AI-guided learning. The application combines a React.js frontend with a Flask backend, utilizing a locally-hosted language model that has been prompt-engineered to teach through guided discovery rather than direct instruction. Users interact with an integrated Monaco code editor while receiving personalized hints, step-by-step guidance, and real-time feedback from an AI tutor that adapts its teaching style to each individual's learning pace. The platform runs entirely offline with GPU acceleration, ensuring fast response times and complete privacy while helping developers build genuine problem-solving skills for technical interviews. \n\n (Still being developed!)",
       imagePath: null,
@@ -38,12 +53,6 @@ function Projects() {
       description: 'My first full stack project, this is a task management application built with the MERN stack and also with Electron for desktop app deployment. Allows for cross-device synchronization through MongoDB Atlas cloud database. Basic CRUD operations for task management and a task categorization system for filtering tasks by type.',
       imagePath: ToDoList,
       githubUrl: 'https://github.com/viccon23/todo-list'
-    },
-    {
-      title: 'High Performance Voxel Game Engine',
-      description: "Collaborated on creating a voxel game engine using C++ and the BGFX rendering library. Focused on optimization techniques and rendering algorithms for high performance chunk generation and frame rates.",
-      imagePath: HighPerformanceVoxelEngine,
-      githubUrl: 'https://github.com/athaun/voxel-engine'
     },
     {
       title: 'The Deepening',
@@ -82,11 +91,21 @@ function Projects() {
                 <div className="project-card fade-in" key={index}>
                   <div className="project-info">
                     <h2>{project.title}</h2>
-                    <p>{project.description}</p>
+                    <p>
+                      {project.description}
+                      {project.demoUrl && (
+                        <>
+                          <br />
+                          <a className="project-demo-link" href={project.demoUrl}>Open the live explorer</a>
+                        </>
+                      )}
+                    </p>
                   </div>
-                  <div className="project-image">
-                    <img src={project.imagePath} alt={project.title} />
-                  </div>
+                  {project.imagePath && (
+                    <div className="project-image">
+                      <img src={project.imagePath} alt={project.imageAlt || project.title} loading="lazy" />
+                    </div>
+                  )}
                   {project.githubUrl && (
                     <div className="github-link">
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

@@ -23,7 +23,9 @@ function Experience() {
       companyUrl: 'https://www.utrgv.edu/',
       duration: 'September 2025 - Present',
       description: [
-        " Conducting research on Facial Affect Analysis using deep learning methods for affective autonomous vehicles.",
+        "Built autonomous vehicle dilemma scenarios in CARLA for participant studies using EEG to examine emotional responses.",
+        "Developed Python pipelines to evaluate how autonomous vehicle attitude models transfer between cities and project attitudes using Census data.",
+        "Compared probability models in a fixed Bayesian network and tested how learned representations affect prediction and interpretability in air taxi choice models.",
       ]
     },
     {
